@@ -1,0 +1,189 @@
+1.
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int i=16;
+    i=! i>15;;
+    printf("i=%d",i);
+
+    return 0;
+}
+o/p :0
+
+2.
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+   
+    printf("%% % ");
+
+    return 0;
+}
+o/p:%
+
+3.
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a=5;
+    a=1,2,3;
+    printf("%d",a);
+
+    return 0;
+}
+o/p:1 // priority left to right
+
+4.
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a=5;
+    a=(1,2,3);
+    printf("%d",a);
+
+    return 0;
+}
+
+o/p:3 // in bracket priority is right to left 
+
+5.
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int i=10;
+    i++;
+    i*i;
+    printf("%d",i);
+
+    return 0;
+}
+o/p: 11
+
+6.
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int i=0,j=0;
+    if(i++==j++)
+    printf("%d %d",i--,j--);
+    else
+    printf("%d %d",i,j);
+
+    return 0;
+}
+o/p: 1 1
+// (0==0) True so, post increment 
+
+
+7.
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    char str[8]="if block";
+    if(str=="if block")
+    printf(" if block executed");
+    else
+    printf("else block executed");
+    return 0;
+}
+o/p: else block executed //as in c and c++ we cant compare directly we usr str.cmp for comparison
+
+
+8.
+#include <stdio.h>
+
+int main() {
+    int i=5,j=4;
+  if(printf(""))
+  printf("%d %d",i,j);
+  else 
+  printf("%d %d",i++,++j);
+
+    return 0;
+}
+o/p: 5 5 
+
+9.
+#include <stdio.h>
+
+int main() {
+ int i=1,j=0;
+  if(i-- == j)
+  printf(" i=%d ",--i);
+  else 
+  printf(" j=%d",++j);
+
+    return 0;
+}
+o/p:j=1
+
+10.
+#include <stdio.h>
+
+int main() {
+ int i=25;
+  if(i==25);{
+  i=50;
+  }
+  if(i==25){
+  i=i+1;
+  }
+  else{
+  i=i+1;
+  }
+  printf(" %d",i);
+
+    return 0;
+}
+o/p:51
+
+11.
+include <stdio.h>
+
+int main() {
+int i=5;
+ if(i=3,4){
+     printf("hello");
+ }else{
+  printf("hii");
+}
+    return 0;
+}
+o/p: hello // because in this case if if we have non zero value i.e true so,1 i.e hello
+
+
+12.
+#include <stdio.h>
+
+int main() {
+
+ if(sizeof(0)){
+     printf("hello");
+ }else{
+  printf("hii");
+}
+    return 0;
+}
+o/p; hello here the o is integer so it will return 2 or 4 byte data as per compiler so,its 1 returning some value thats why hello
+
+13
+#include <stdio.h>
+
+int main() {
+
+ if(sizeof('\0')){
+     printf("inside if");
+ }else{
+  printf("inside else");
+}
+    return 0;
+}
+o/p:  inside if
+// here \0 is gives the ending of string which return 1 bit data so, true
