@@ -1,0 +1,190 @@
+1. Program to print address of variable
+
+#include <iostream>
+int main() {
+ int age=30;
+ int sal=1500.50;
+ printf("address of age=%u\n",&age); 
+ printf("address of salary=%u\n",&sal);
+    return 0;
+}
+o/p: address of age=1821015740
+     address of salary=1821015736
+here,we store address of variable
+
+2.program for dereferencing pointer
+
+#include <iostream>
+int main() {
+ int a=87;
+ int *p1=&a;
+ printf("address of a=%u\n",&a); 
+ printf("address of p1=%u\n",&p1);
+ printf("value of p1=%d\n",p1);
+ printf("value of a=%d\n",a);
+ printf("value of p1=%d\n",*p1);
+ printf("value of p1=%d\n",*(&a));
+    return 0;
+}
+o/p: address of a=895287468
+address of p1=895287456
+value of p1=895287468
+value of a=87
+value of p1=87
+value of p1=87
+
+
+3.pointer to pointer or nested pointer or double pointer
+
+#include <iostream>
+int main() {
+ int a=87;
+ int *p1=&a;
+ int **q1=&p1;
+ printf("address of a=%u\n",&a); 
+ printf("address of p1=%u\n",&p1);
+ printf("address of q1=%u\n",&q1);
+ printf("value of p1=%d\n",&p1);
+ printf("value of q1=%d\n",&q1);
+ printf("value of a=%d\n",a);
+ printf("value of p1=%d\n",*p1);
+ printf("value of p1=%d\n",*(&a));
+ printf("value of q1=%d\n",**q1);
+ 
+    return 0;
+}
+
+o/p: address of a=766778988
+address of p1=766778976
+address of q1=766778968
+value of p1=766778976
+value of q1=766778968
+value of a=87
+value of p1=87
+value of p1=87
+value of q1=87
+here 
+
+4. print the size of pointer and size of value
+
+#include <iostream>
+int main() {
+    char a='x',*p1=&a;
+    int b=12,*p2=&b;
+    float c=2.5,*p3=&c;
+    double d=18.22,*p4=&d;
+    printf("sizeof(p1)=%u,sizeof(*p1)=%u\n",sizeof(p1),sizeof(*p1));
+    printf("sizeof(p2)=%u,sizeof(*p2)=%u\n",sizeof(p2),sizeof(*p2));
+    printf("sizeof(p3)=%u,sizeof(*p3)=%u\n",sizeof(p3),sizeof(*p3));
+    printf("sizeof(p4)=%u,sizeof(*p4)=%u\n",sizeof(p4),sizeof(*p4));
+ 
+    return 0;
+}
+o/p: sizeof(p1)=8,sizeof(*p1)=1
+     sizeof(p2)=8,sizeof(*p2)=4
+     sizeof(p3)=8,sizeof(*p3)=4
+     sizeof(p4)=8,sizeof(*p4)=8
+
+
+5. we cannot multiply or divide pointer value but we can add and subtract pointer.
+
+#include <iostream>
+int main() {
+    char b='x',*pc=&b;
+    int a=12,*pi=&a;
+    float c=2.5,*pf=&c;
+    printf("value of pi=address of a=%u\n",pi);
+    printf("value of pc=address of a=%u\n",pc);
+    printf("value of pf=address of a=%u\n",pf);
+    pi++,pc++,pf++;
+    printf(" Now value of pi==%u\n",pi);
+    printf(" Now value of pc==%u\n",pc);
+    printf(" Now value of pf==%u\n",pf);
+    
+    return 0;
+}
+o/p:value of pi=address of a=1051343328
+value of pc=address of a=1051343335
+value of pf=address of a=1051343324
+ Now value of pi==1051343332
+ Now value of pc==1051343336
+ Now value of pf==1051343328
+here we check if we post increment the value of pi ,pc,pf how address will change.
+
+6. print value of array using pointer and subscript notation 
+
+#include <iostream>
+int main() {
+    int arr[5]={5,10,20,25,30};
+    for(int i=0;i<5;i++){
+        printf("value of a[%d]\n",i);
+        printf("%d\n",arr[i]);
+        printf("%d\n",i[arr]);
+        printf("%d\n",*(arr+i));
+        printf("%d\n",*(i+arr));
+    }
+    return 0;
+}
+o/p:
+value of a[0]
+5
+5
+5
+5
+value of a[1]
+10
+10
+10
+10
+value of a[2]
+20
+20
+20
+20
+value of a[3]
+25
+25
+25
+25
+value of a[4]
+30
+30
+30
+30
+
+7. casting integer to char
+
+#include <iostream>
+int main() {
+    int a=66;
+    char*c;
+    c=(char*)&a;//explicite typecasting
+    printf("%d\n",*c);
+    printf("%c\n",*c);
+    return 0;
+}
+o/p: 66
+     B 
+8. pointer and function
+#include <iostream>
+void fun(int *);
+int main() {
+    int arr[]={3,6,9,12,15,18};
+    fun(arr);
+    return 0;
+}
+void fun(int *p){
+    int i;for(i=0;i<6;i++){
+        printf("%d\n",*p);
+        p++;
+    }
+}
+o/p:
+3
+6
+9
+12
+15
+18
+
+
