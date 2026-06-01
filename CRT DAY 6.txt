@@ -1,0 +1,268 @@
+DSA (DATA STRUCTURES AND ALGORITHMS)
+
+Definition:
+DSA is a combination of Data Structures and Algorithms used to organize, manage, and process data efficiently. It helps in solving problems effectively and improving program performance.
+
+--------------------------------------------------
+DATA PROCESSING
+--------------------------------------------------
+
+Data Structure:
+A Data Structure is a way of organizing and storing data so that it can be accessed and modified efficiently.
+
+Types of Data Structures:
+
+1. Primitive Data Structures
+   - Integer (int)
+   - Float
+   - Character (char)
+   - String
+   - Boolean
+
+2. Non-Primitive Data Structures
+
+   A. Linear Data Structures
+      - Array
+      - Linked List
+      - Stack
+      - Queue
+
+   B. Non-Linear Data Structures
+      - Tree
+      - Graph
+
+--------------------------------------------------
+TIME COMPLEXITY
+--------------------------------------------------
+
+Definition:
+Time Complexity is the amount of time an algorithm takes to run as the size of the input increases.
+
+It helps compare the efficiency of algorithms.
+
+--------------------------------------------------
+BIG O NOTATION
+--------------------------------------------------
+
+Definition:
+Big O Notation is used to describe the worst-case performance of an algorithm. It shows how the execution time grows as the input size increases.
+
+Common Time Complexities:
+
+1. O(1)      - Constant Time
+2. O(log N)  - Logarithmic Time
+3. O(N)      - Linear Time
+4. O(N²)     - Quadratic Time
+5. O(2^N)    - Exponential Time
+
+--------------------------------------------------
+1. O(1) - CONSTANT TIME
+--------------------------------------------------
+
+Definition:
+The execution time remains constant regardless of the input size.
+
+Example:
+
+Array = [1, 2, 3, 4, 5]
+
+arr[0]
+
+Explanation:
+Accessing an element using its index takes the same amount of time no matter how large the array becomes.
+
+Time Complexity = O(1)
+
+--------------------------------------------------
+2. O(log N) - LOGARITHMIC TIME
+--------------------------------------------------
+
+Definition:
+The input size is reduced by half in each step.
+
+Example: Binary Search
+
+int binarySearch(int arr[], int n, int key)
+{
+    int low = 0, high = n - 1;
+
+    while(low <= high)
+    {
+        int mid = (low + high) / 2;
+
+        if(arr[mid] == key)
+            return mid;
+        else if(arr[mid] < key)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+
+    return -1;
+}
+
+Explanation:
+At every step, Binary Search eliminates half of the remaining elements.
+
+Time Complexity = O(log N)
+
+--------------------------------------------------
+3. O(N) - LINEAR TIME
+--------------------------------------------------
+
+Definition:
+The execution time increases linearly with the input size.
+
+Example:
+
+int arr[] = {1, 2, 3, 4, 5};
+
+for(int i = 0; i < n; i++)
+{
+    printf("%d ", arr[i]);
+}
+
+Explanation:
+The loop visits every element exactly once.
+
+Time Complexity = O(N)
+
+--------------------------------------------------
+4. O(N²) - QUADRATIC TIME
+--------------------------------------------------
+
+Definition:
+The execution time grows proportional to the square of the input size.
+
+Example:
+
+for(int i = 0; i < n; i++)
+{
+    for(int j = 0; j < n; j++)
+    {
+        printf("%d %d\n", i, j);
+    }
+}
+
+Explanation:
+Two nested loops run N times each.
+
+Total Operations = N × N
+
+Time Complexity = O(N²)
+
+--------------------------------------------------
+5. O(2^N) - EXPONENTIAL TIME
+--------------------------------------------------
+
+Definition:
+The execution time doubles with each additional input.
+
+Example: Recursive Fibonacci
+
+int fibonacci(int n)
+{
+    if(n <= 1)
+        return n;
+
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+Explanation:
+Each function call generates two more recursive calls, causing rapid growth in the number of operations.
+
+Time Complexity = O(2^N)
+
+--------------------------------------------------
+SUMMARY TABLE
+--------------------------------------------------
+
+Complexity     Name               Example
+
+O(1)           Constant Time      Array Index Access
+O(log N)       Logarithmic Time   Binary Search
+O(N)           Linear Time        Traversing an Array
+O(N²)          Quadratic Time     Nested Loops
+O(2^N)         Exponential Time   Recursive Fibonacci
+
+--------------------------------------------------
+CONCLUSION
+--------------------------------------------------
+
+Data Structures help organize data efficiently, while Algorithms define the steps to solve a problem. Time Complexity is used to measure the efficiency of an algorithm, and Big O Notation helps compare algorithms based on their performance as input size grows.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PROGRAM:-
+
+
+1.LINEAR SEARCH
+
+#include <iostream>
+using namespace std;
+
+int linearsearch(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 7;
+
+    int result = linearsearch(arr, size, target);
+
+    if (result != -1) {
+        cout << "Element found at index no = " << result << endl;
+    } else {
+        cout << "Element not found" << endl;
+    }
+
+    return 0;
+}
+
+O/P:- Element found at index no = 6
+
+
+
+2.Find how many times target is occurred in array by using count
+
+add count to count the occurance of target
+
+#include <iostream>
+using namespace std;
+
+int linearsearch(int arr[], int size, int target) {
+    int count = 0;
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    int arr[] = {7, 2, 3, 7, 5, 6, 7, 2, 9, 7};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 15;
+
+    int result = linearsearch(arr, size, target);
+
+    if (result > 0) {
+        cout << "Element found " << result << " times" << endl;
+    } else {
+        cout << "Element not found" << endl;
+    }
+
+    return 0;
+} 
+
+O/P:-Element found 4 times
+
