@@ -1,0 +1,127 @@
+Queue
+
+we can implement queue by two ways
+1.Array-small data
+2.Linklist-big data with good performance
+
+
+Program
+
+#include <iostream>
+using namespace std;
+
+class queue{
+    private:
+    int *arr;
+    int front;
+    int rear;
+    int capacity;
+    public:
+    queue(int size){
+        capacity =size;
+        arr=new int(capacity);
+        front=0;
+        rear=-1;
+    }
+    bool isEmpty(){
+        return rear<front;
+    }
+    bool isFull(){
+        return rear ==capacity-1;
+    }
+    void enqueue (int value){//enter value
+        if(isFull()){
+            cout<<"queue overflow cannot insert="<< value<<endl;
+            return;
+        }
+        arr[++rear]==value;
+        cout<<"value"<<"insert into queue"<<endl;   
+    }
+        
+        void dequeue(){
+             if(isEmpty()){
+                 cout<<"queue underflow! queue is empty"<<endl;
+                 return;
+                 }
+                 cout<< arr[front]<<"remove from queue"<<endl;
+                 front++;
+        }
+        
+        void frontElement(){
+             if(isEmpty()){
+                 cout<<"queue is empty"<<endl;
+                 return;
+                 }
+                 cout<<"front value="<<arr[front];
+                 }
+        void display(){
+            if(isEmpty()){
+                cout<<"No element to display"<<endl;
+                }
+                for(int i=front;i<=rear;i++){
+                         cout<<arr[i]<<" ";\
+                    
+                }
+                cout<<endl;
+                }
+    
+};
+
+int main() {
+    queue obj(5);
+    cout<<"queue has created"<<endl;
+    while(true){
+        int choise;
+        cout<<"1. enqueue"<<endl;
+        cout<<"2. display"<<endl;
+        cout<<"3. dequeue"<<endl;
+        cout<<"4. peek"<<endl;
+        cout<<"5. delete queue"<<endl;
+        cout<<"6. exit"<<endl;
+        cout << "Enter your choice: ";
+        cin >> choise;
+
+    if(choise == 1){
+        int val;
+        cout << "Enter element: ";
+        cin >> val;
+        obj.enqueue(val);
+    }
+    else if(choise == 2){
+        obj.display();
+    }
+    else if(choise == 3){
+        obj.dequeue();
+    }
+    else if(choise == 4){
+        obj.frontElement();
+    }
+    else if(choise == 5){
+        break;
+    }
+    else{
+        cout << "Invalid choice" << endl;
+    }
+
+    }
+    return 0;
+}
+
+
+
+
+TREE
+
+"A tree is a nonlinear data structure with hierarchical relationships between its elements
+ without having any cycle ,it is basically reverse from a real life tree."
+
+quicker and easier access to data.
+it store hierarchical data ,like folder structure,organization structure,html data.
+
+
+Binary tree
+
+have to child nodes.
+left node and right node.
+left<root<right
+
