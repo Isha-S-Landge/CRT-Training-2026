@@ -1,0 +1,111 @@
+
+STACK
+we can implement stack by two ways 
+1.array-Maximum size is known or can be estimated and performance is important.
+2.linklist-Size is unknown and can grow dynamically.
+
+//stack-menu driven program
+#include <iostream>
+using namespace std;
+class stack
+{
+    private:
+     int size;
+     int top;
+     int *arr;
+    public:
+    stack(int s)//consturctor
+    {
+        size=s;
+        arr=new int[size];
+        top=-1;
+    }
+    bool isempty()
+    {
+        return top==-1;
+    }
+    bool isfull()
+    {
+        return top==size-1;
+    }
+    void push(int value)
+    {
+        if(isfull())
+        {
+            cout<<"stack is full"<<endl;
+            return;
+        }
+        arr[++top]=value;
+        cout<<"arr[top] element has pushed"<<endl;
+    }
+    //display stack
+    void display()
+    {   if(isempty())
+    {
+        cout<<"stack is empty"<<endl;
+        return;
+    }
+        for(int i=top;i>=0;i--)
+        {
+            cout<<"["<<arr[top]<<"]"<<endl;
+        }
+    }
+    void pop()
+    {
+        if(isempty())
+        {
+            cout<<"stack is empty"<<endl;
+        }
+        cout<<arr[top--]<<endl;
+    }
+    void peek()
+    {
+        if(isempty())
+        {
+            cout<<"stack is empty"<<endl;
+            return;
+        }
+        cout<<"top element="<<arr[top]<<endl;
+    }
+};
+int main() {
+    stack st(5);//stack size=5
+    cout<<"stack has created"<<endl;
+    while(true)
+    {    int choice;
+        cout<<"1.push"<<endl;
+        cout<<"2.pop"<<endl;
+        cout<<"3.display"<<endl;
+        cout<<"4.peek"<<endl;
+        cout<<"5.exit"<<endl;
+        cout<<"enter your choice"<<endl;
+        cin>>choice;
+        if(choice==1)
+        {   int val;
+            cout<<"enter the element"<<endl;
+            cin>>val;
+            st.push(val);
+        }
+         else if(choice==2)
+         {
+            st.pop(); 
+         }
+        else if(choice==3)
+        {   
+            st.display();
+        }
+        else if(choice==4)
+        {
+            st.peek();
+        }
+        else if(choice==5)
+        {
+         cout<<"exit "<<endl;
+        }
+        else
+        {
+            break;
+        }
+      
+    }
+}
