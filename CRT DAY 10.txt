@@ -1,0 +1,133 @@
+Binary Tree
+
+
+#include <iostream>
+using namespace std;
+class node{
+    public:
+    int data;
+    node*right;
+    node*left;
+    node(int value){
+        data=value;
+        left-NULL;
+        right=NULL;
+    }
+};
+
+int main() {
+    node*root= new node(10);
+    root->left=new node(20);
+    root->right=new node(30);
+    
+    root->left->left=new node(40);
+    root->left->right=new node(40);
+    cout<<"root node:"<<root->data<<endl;
+    return 0;
+
+}
+
+o/p:root node:10
+
+
+
+String
+
+
+1.Reading char by char and print it
+
+#include <iostream>
+using namespace std;
+int main() {
+    char name[10],ch;
+    int i=0;
+    cout<<"enter the name:";
+    while(i<10){
+        cin>>ch;
+        name[i]=ch;
+        i++;
+    }
+    name[i]='\0';
+    cout<< "name"<<name;
+    return 0;
+
+}
+
+
+2.Compare two string for a equal or not using strcmp()
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main() {
+    char str[50],str2[50];
+    cout<<"enter the string :";
+    cin>>str;
+    cout<<"enter the string 2 :";
+    cin>>str2;
+    if(strcmp(str,str2)==0){
+    cout<<"equal"<<endl;
+    }else{
+        cout<<"unequal";
+    }
+    return 0;
+
+}
+
+
+
+
+find length of string using strln()
+
+
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main() {
+    char str[20]="Ashish";
+    char str2[20]={'a','s','h','i','s','h'};
+    char str3[20];
+    cout<<"enter the string :";
+    cin>>str3;
+    cout<<"length of string :"<<strlen(str)<<endl;
+    cout<<"length of string :"<<strlen(str2)<<endl;
+    cout<<"length of string :"<<strlen(str3)<<endl;
+    
+    return 0;
+
+}
+
+o/p:
+enter the string :rahul
+length of string :6
+length of string :6
+length of string :5
+
+
+
+
+
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+void mystrlen(char*);
+int main() {
+ char str[20];
+ cout<<"enter the string:";
+ cin>>str;
+ mystrlen(str);
+ return 0;
+
+}
+void mystrlen(char*s1){
+    int length=0;
+    while(*s1='\0'){
+        length++;
+        s1++;
+    }
+    cout<<"length is : "<<length;
+    
+}
+
