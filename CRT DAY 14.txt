@@ -1,0 +1,178 @@
+CRT DAY 14
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int arr[]={3,5,1,2,4};
+    sort(begin(arr),end(arr));
+    for(int i:arr){
+        cout<<i<<" ";
+    }
+  
+    return 0;
+}
+
+o/p: 1 2 3 4 5
+
+
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void show(int a[],int asize){
+    for(int i=0;i<asize;++i){
+        cout<<a[i]<<" ";
+    }
+}
+
+int main() {
+    int a[]={3,5,8,9,6,7,1,2,0};
+    int asize=sizeof(a)/sizeof(a[0]);
+    cout<<"the array before sorting is : \n";
+    show(a,asize);
+    sort(a,a+asize);
+    cout<<"\n\n the array after sorting is:\n";
+    show(a,asize);
+    return 0;
+}
+
+
+o/p:
+the array before sorting is : 
+3 5 8 9 6 7 1 2 0 
+
+ the array after sorting is:
+0 1 2 3 5 6 7 8 9 
+
+
+
+
+
+
+
+
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <algorithm>
+using namespace std;
+void show(int a[],int arraysize){
+    for(int i=0;i<arraysize;++i){
+        cout<<a[i]<<" ";
+    }
+}
+
+int main() {
+    int a[]={1,5,6,9,6,7,3,4,2,0};
+    int asize=sizeof(a)/sizeof(a[0]);
+    cout<<"the array is: \n";
+    show(a,asize);
+    sort(a,a+asize);
+    cout<<"\nthe array after sorting: ";
+    show(a,asize);
+    if (    binary_search (a,a+10,2)){
+        cout<<"\nElement found in the array\n";
+        
+    }else{
+    cout<<"\nElement not found in the array\n";
+    }
+    return 0;
+}
+
+
+
+
+o/p:
+
+the array is: 
+1 5 6 9 6 7 3 4 2 0 
+the array after sorting: 0 1 2 3 4 5 6 6 7 9 
+Element found in the array
+
+
+
+
+Stack implementation using HTL
+
+
+
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int>stack;
+    stack.push(21);
+    stack.push(22);
+    stack.push(23);
+    stack.push(24);
+    stack.push(25);
+    cout<<stack.top();
+    int num=0;
+    stack.push(num);
+    stack.pop();
+    stack.pop();
+    while(!stack.empty()){
+        cout<<"\n"<<stack.top();
+        stack.pop();
+    }
+    return 0;
+}
+
+
+
+
+o/p:
+25
+24
+23
+22
+21
+
+
+
+queue implementation using HTL
+
+
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <queue>
+using namespace std;
+
+
+void showq(queue<int>gq){
+    queue<int>g=gq;
+    while(!g.empty()){
+        cout<<"\t"<<g.front();
+        g.pop();
+    }
+    cout<<"\n";
+}
+
+int main() {
+    queue<int>que;
+    que.push(11);
+    que.push(22);
+    que.push(33);
+    cout<<" the queue is: ";
+    showq(que);
+    cout<<" que.size(): "<<que.size();
+    cout<<"\n que.front(): "<<que.front();
+    cout<<"\n que.back(): "<<que.back();
+    cout<<"\n que.pop():";
+    que.pop();
+    showq(que);
+    return 0;
+}
+
+
+o/p: 
+ the queue is: 	11 22 33
+ que.size(): 3
+ que.front(): 11
+ que.back(): 33
+ que.pop(): 22	33
+
