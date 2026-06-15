@@ -1,0 +1,399 @@
+Set Theory
+In a class of 80 students:
+45 students like Mathematics.
+35 students like Science.
+20 students like both Mathematics and Science.
+How many students like neither Mathematics nor Science?
+2 points
+A) 15
+B) 20
+C) 25
+D) 30
+Time & Work
+A can complete a piece of work in 12 days and B can complete the same work in 18 days. They work together for 4 days. After that, A leaves and B completes the remaining work alone.
+In how many more days will B finish the remaining work?
+2 points
+A) 4 days
+B) 5 days
+C) 6 days
+D) 8 days
+In a class 75% of the students passed the examination. The number of students who passed the examination is 90 and 20% of the students did not appear, then the total strength of the class is 
+2 points
+(1) 150
+(2) 160
+(3) 180
+(4) 200
+A man had Rs.4,50,000 in his locker. After 1 year he deposited 33 1/3% of the amount in the locker and after second year he deposited 20% of the amount present in the locker and in the third year he withdrew 50% of the amount present in the locker. What is the percentage change of amount in the locker.
+2 points
+(1) 20% increase
+(2) 20% decrease
+(3) 33 1/3 % increase
+(4) 33 1/3 % decrease
+A man bought some apples from the market. On the next day he found that 10% of them are spoiled and he sold 90% of the remaining and was left with 81 apples. How many apples did the man bring?
+2 points
+(1) 1000
+(2) 900
+(3) 800
+(4) 750
+In the summer season, the cost price of each cooler is decreased by 30%, then the sales are increased by 20% find the overall effect in the sales.
+
+2 points
+1) Loss of 10%
+(2) loss of 16%
+(3) loss of 20%
+(4) none
+ A and B started a Business with investments in the ratio of 3:5. After 1 year B got Rs.15,000 more than A. What is the profit of A if he withdrew his investment after 8 months?
+
+2 points
+(1) Rs.10,000
+(2) Rs.15,000
+(3) Rs.20,000
+(4) Rs.25,000
+Seven tables and four chairs cost ₹8600. Three tables and two chairs cost ₹3800. What is the price of one table?
+2 points
+1000
+1200
+1400
+1600
+How many integer solutions are there for
+∣x∣+∣y∣=8
+2 points
+28
+30
+32
+34
+The simple interest on a certain sum for 11 2/3 years at the rate of 7.2% per annum is ₹ 7056.
+What will be the amount payable on the same sum at 7.4% per annum simple interest in 8 4/7 years?
+2 points
+A. ₹ 13,745
+B. ₹ 13,728
+C. ₹ 13,744
+D. ₹ 13,743
+Para‑Jumble
+
+Sentences:
+A. As a result, organizations often misinterpret short‑term fluctuations as long‑term trends.
+B. However, many analytical models fail to account for the volatility inherent in real‑world environments.
+C. Predictive analytics is widely used to forecast consumer behavior.
+D. This leads to strategic decisions that are reactive rather than informed.
+
+2 points
+A. C‑B‑A‑D
+B. B‑C‑A‑D
+C. C‑A‑B‑D
+D. A‑C‑B‑D
+Para‑Jumble
+
+Sentences:
+A. This shift has encouraged companies to redesign their training programs.
+B. With remote work becoming mainstream, employees increasingly rely on digital collaboration tools.
+C. As a consequence, digital literacy is now considered a core professional competency.
+D. These tools demand not only technical familiarity but also adaptability and communication skills.
+
+2 points
+A. B‑D‑C‑A
+B. B‑A‑D‑C
+C. D‑B‑A‑C
+D. A‑C‑D‑B
+The respective ratio between the present ages of Rajesh and Manoj is 6 : 7. If Manoj is 4 years older than Rajesh, then what will be the respective ratio of the ages of Rajesh and Manoj after 4 years?  
+2 points
+(A) 4 : 3
+(B) 7 : 8
+(C) 3 : 4
+(D) 3 : 5
+Milk and water are mixed in vessel A in the ratio of 5:2 and in vessel B in the ratio of 8:5. In what ratio should quantities be taken from the two vessels so as to form a mixture in which milk and water will be in the ratio of 9:4 ?
+
+2 points
+(A) 7:2
+(B) 5:2
+(C) 2:7
+(D) 2:5
+The average age of 24 boys and their teacher is 15 years. When the teacher's age is excluded, the average age decreases by 1 year. The age of the teacher is:
+2 points
+(A) 40 Year
+(B) 41 Years
+(C) 38 Years
+(D) 39 Years
+Three equal installment, each of Rs 200, were paid at the end of year on a sum borrowed at 20% compound interest compounded annually. Find the sum.
+2 points
+a. Rs. 600
+b. Rs. 400
+c. Rs. 421.30
+d. Rs 432.10
+If a certain sum becomes double in 3 years
+at certain rate of interest at C.I. Then in how many years
+it will become 16 times?
+2 points
+A)12 years
+B) 24 years
+C) 8 years
+D) Cannot be determined
+E) None of the above
+Ram invests two sum of money A and B at 10% p.a. and 20% p.a respectively at CI for 2 years. IF the total interest on both the sum is Rs 5350 then find the sum invested in A if the total sum of A and B was Rs 20,000?
+2 points
+A) Rs 5,000
+B) Rs 10,000
+C) Rs 12,000
+D) Rs 15,000
+E) None of these
+A sold a pen to B at Rs 60 profit. ‘B’ increased its  marked price by 50% and then sold it to C at a discount of 25%. Profit earned by ‘B’ is Rs 10 more than A. Find A’s cost price?
+2 points
+A) 250
+B) 500
+C) 750
+D) 1000
+E) 1250
+Rahul went to purchase a Nokia mobile handset, the shopkeeper told him to pay 20% tax if he asked the bill. Rahul manages to get the discount of 5% on the actual sale price of the mobile and he paid the shopkeeper Rs. 3325 without tax. Besides he manages to avoid to pay 20% tax on the already discounted price, what is the amount of discount that he has gotten (in Rs.)?
+2 points
+(a) 825
+(b) 850
+(c) 875
+(d) 900
+(e) 975
+If RED is coded as 6720, then how GREEN would be coded?
+
+2 points
+(1)9207716
+(2)1677199
+(3)1677209
+(4)16717209
+Identify the diagram that best represents the relationship among the given classes?
+
+2 points
+Captionless Image
+a
+b
+c
+d
+Statement 1: All books are pens.
+
+Statement II: Some pens are pencils.
+
+Statement III: No pencil is a rubber
+
+Conclusion I: Some rubbers can be books.
+
+Conclusion II: No book is a pencil....
+
+2 points
+a) Conclusion I only
+b) Conclusion II only
+c) Both the conclusions follow
+d) Either conclusion I or conclusion II follows
+e) None of the conclusions follows..
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Answer the questions based on the information given below. There are seven persons namely P, Q, R, S, T, U and V who work in different compay i.e. IBM, TCS, Wipro, L&T, Paytm, Airtel, Jio but not necessarily in the same order. Also, they owned cars of different company i.e. Ford, NANO, TATA, BMW, Datsun, Toyota and Maruti but not necessarily in the same order.
+P has Maruti car. Neither T nor Q has NANO car. U works in Wipro and has Ford car. T does not have TATA or Datsun car. The one who has Toyota car does not work in L&T or Airtel. R does not have Toyota. T works in Airtel. Neither V nor S works in Paytm. R works in JIO. V does not work in IBM. The one who works in IBM has NANO car. The one who has Datsun car works in Paytm
+ 1.) Who works in TCS? 
+2 points
+a. R
+b. V
+c. Q
+d. T
+e. None of these
+2.) Who has BMW car?
+2 points
+a. T
+b. P
+c. V
+d. T
+e. None of these
+3.) Which of the following pair is true?
+2 points
+a. S-IBM
+b. R-BMW
+c. S-TATA
+d. None of these
+4.) Which of the following statement is false.
+2 points
+a. Q works in Paytm.
+b. S has NANO car.
+c. P works in L&T.
+d. S-Ford
+e. None of these
+f. V has Toyota car of these
+5.) The one who works in Jio has car of which company? 
+2 points
+a. BMW
+b. Maruti
+c. Ford
+d. TATA
+e. None of these
+
+==========================================================================================================================================
+
+Read the given passage and answer the following
+questions:
+
+
+In recent years, organizations have increasingly adopted data‑driven decision‑making,
+assuming that more data automatically leads to better outcomes. However,
+several studies reveal a paradox: teams with access to excessive data often
+make slower and less accurate decisions. This phenomenon is partly due to
+“analysis paralysis,” where decision‑makers spend disproportionate time
+reconciling conflicting data points instead of identifying the core variables
+that truly influence outcomes.
+
+
+
+Moreover, the reliability of data itself is frequently
+overestimated. Many companies collect data from systems that were never
+designed for analytical precision. For example, operational logs may capture
+events inconsistently, and customer feedback systems may attract responses only
+from highly satisfied or highly dissatisfied users, creating skewed datasets.
+When such data is fed into predictive models, the resulting insights may appear
+statistically sound but lack real‑world validity.
+
+
+
+Another challenge arises from the assumption that
+correlation implies causation. In fast‑changing environments, variables that
+once moved together may diverge due to shifts in consumer behavior, regulatory
+changes, or technological disruptions. Yet decision‑makers, under pressure to
+justify their choices, often rely on outdated correlations because they appear
+mathematically convincing.
+
+
+
+To address these issues, some organizations have begun
+emphasizing “data minimalism,” a practice that prioritizes a small set of high‑quality
+indicators over large volumes of loosely relevant data. Early adopters report
+that teams become more decisive, models become more interpretable, and
+strategic discussions shift from debating numbers to evaluating assumptions.
+Interestingly, these organizations also observe an improvement in innovation,
+as employees feel less constrained by rigid dashboards and more empowered to
+explore unconventional ideas.
+
+
+
+Ultimately, the passage suggests that data is valuable not
+by its quantity but by its clarity, context, and alignment with the decisions
+it aims to support.
+
+Q1. What is the central paradox discussed in the passage?
+
+2 points
+A. More data always leads to better decisions
+B. Excessive data can slow down and worsen decision‑making
+C. Data minimalism reduces innovation
+D. Predictive models are always unreliable
+Q2. Which of the following is identified as a major cause of flawed insights?
+
+
+
+2 points
+A. Overdependence on human intuition
+B. Use of data from systems not designed for analytical accuracy
+C. Lack of advanced machine‑learning tools
+D. Excessive employee creativity
+Q3. According to the passage, why do outdated correlations persist in decision‑making?
+
+
+
+2 points
+A. They are easier to calculate
+B. They are mandated by regulatory bodies
+C. They provide convenient justification under pressure
+D. They are always statistically accurate
+Q4. What is one reported benefit of adopting data minimalism?
+
+2 points
+A. Teams rely less on assumptions
+B. Models become more complex
+C. Strategic discussions become more assumption‑focused
+D. Employees avoid unconventional ideas
+Q5. The tone of the passage can best be described as:
+
+
+
+2 points
+A. Critical and cautionary
+B. Humorous and informal
+C. Aggressive and confrontational
+D. Indifferent and detached
+
+
+
+
+===========================================================================================================================================
+
+
+
+
+Cloze Passage: 
+
+Despite the growing enthusiasm for automation, many organizations underestimate
+the 
+
+(1) required to integrate intelligent systems into existing
+workflows. While automation promises efficiency, poorly planned implementation
+often results in disruptions that 
+
+(2) productivity rather than enhance
+it.
+
+Q1. Choose the most appropriate word for (1):
+
+2 points
+A. complexity
+B. simplicity
+C. hesitation
+D. uniformity
+Q2. Choose the most appropriate word for (2):
+
+2 points
+A. accelerate
+B. undermine
+C. stabilize
+D. forecast
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Study the following information to answer the given questions:Twelve people are sitting in two parallel rows containing six people each, in such a way that there is an equal distance between adjacent persons. In row-1 A, B, C, D, E and F are seated and all of them are facing south. In row-2 P, Q, R, S, T and V are seated and all of them are facing north. Therefore, in the given seating arrangement each member seated in a row faces another member of the other row.V sits third to the right of S.S faces B and F does not sit at any of the extreme ends of the line.D sits third to the right of C.R faces C.The one facing E sits third to the right of P.B and P do not sit at the extreme ends of the line.T is not an immediate neighbour of V and A is not an immediate neighbour of C.
+Who amongst the following faces D?
+2 points
+T
+P
+Q
+R
+None of these
+Who amongst the following represent the people sitting at extreme ends of the rows?
+2 points
+R, F
+T, A
+D, R
+C, Q
+S, A
+Four of the following five are alike in a certain way and thus form a group. Which is the one that does not belong to that group?
+2 points
+B–T
+A–Q
+C–S
+F–P
+D–R
+Four of the following five are alike in a certain way and thus form a group. Which is the one that does not belong to that group?
+2 points
+D
+S
+V
+T
+A
+How many persons are seated between R and T?
+2 points
+One
+Two
+Three
+Four
+None
+
+
+
+
