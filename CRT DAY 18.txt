@@ -1,0 +1,638 @@
+SQL*Plus: Release 21.0.0.0.0 - Production on Mon Jun 15 10:14:28 2026
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+Last Successful login time: Sat Jun 13 2026 11:39:25 +05:30
+
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> desc
+Usage: DESCRIBE [schema.]object[@db_link]
+SQL> desc student
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STD                                                NUMBER(5)
+ STUDENT_NAME                                       VARCHAR2(10)
+ STUDENT_BRANCH                                     VARCHAR2(10)
+
+SQL> insert into student(103,'tanvi','BCA');
+insert into student(103,'tanvi','BCA')
+                    *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> select*from student;
+
+no rows selected
+
+SQL> select * from student
+  2
+SQL> select * from student;
+
+no rows selected
+
+SQL> SELECT * FROM student;
+
+no rows selected
+
+SQL> DESCRIBE student;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ STD                                                NUMBER(5)
+ STUDENT_NAME                                       VARCHAR2(10)
+ STUDENT_BRANCH                                     VARCHAR2(10)
+
+SQL> SHOW TABLES;
+SP2-0158: unknown SHOW option "TABLES"
+SQL> SHOW student;
+SP2-0158: unknown SHOW option "student"
+SQL> SELECT * FROM student;
+
+no rows selected
+
+SQL> insert into student(std,student_name,student_branch)values(101,'isha','ETC');
+
+1 row created.
+
+SQL> insert into student(std,student_name,student_branch)values(102,'manasvi','CSE');
+
+1 row created.
+
+SQL> insert into student(std,student_name,student_branch)values(103,'kashish','EE');
+
+1 row created.
+
+SQL> insert into student(std,student_name,student_branch)values(104,'tanvi','CT');
+
+1 row created.
+
+SQL> insert into student(std,student_name,student_branch)values(105,'prathamesh','IT');
+
+1 row created.
+
+SQL> SELECT * FROM student;
+
+       STD STUDENT_NA STUDENT_BR
+---------- ---------- ----------
+       101 isha       ETC
+       102 manasvi    CSE
+       103 kashish    EE
+       104 tanvi      CT
+       105 prathamesh IT
+
+SQL> SHOW student;
+SP2-0158: unknown SHOW option "student"
+SQL> SELECT * FROM student;
+
+       STD STUDENT_NA STUDENT_BR
+---------- ---------- ----------
+       101 isha       ETC
+       102 manasvi    CSE
+       103 kashish    EE
+       104 tanvi      CT
+       105 prathamesh IT
+
+SQL> alter table student add(Department varchar(10));
+
+Table altered.
+
+SQL> SELECT * FROM student;
+
+       STD STUDENT_NA STUDENT_BR DEPARTMENT
+---------- ---------- ---------- ----------
+       101 isha       ETC
+       102 manasvi    CSE
+       103 kashish    EE
+       104 tanvi      CT
+       105 prathamesh IT
+
+SQL> ALTER TABLE studenr RENAME COLUMN department TO subject;
+ALTER TABLE studenr RENAME COLUMN department TO subject
+*
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> ALTER TABLE student RENAME COLUMN department TO subject;
+
+Table altered.
+
+SQL> SELECT * FROM student;
+
+       STD STUDENT_NA STUDENT_BR SUBJECT
+---------- ---------- ---------- ----------
+       101 isha       ETC
+       102 manasvi    CSE
+       103 kashish    EE
+       104 tanvi      CT
+       105 prathamesh IT
+
+SQL> alter table student drop column subject;
+
+Table altered.
+
+SQL> SELECT * FROM student;
+
+       STD STUDENT_NA STUDENT_BR
+---------- ---------- ----------
+       101 isha       ETC
+       102 manasvi    CSE
+       103 kashish    EE
+       104 tanvi      CT
+       105 prathamesh IT
+
+SQL> desc dual
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DUMMY                                              VARCHAR2(1)
+
+SQL> SELECT * FROM dual;
+
+D
+-
+X
+
+SQL> select 10+5 as result from dual;
+
+    RESULT
+----------
+        15
+
+SQL> select 10*5 as result from dual;
+
+    RESULT
+----------
+        50
+
+SQL> select 10/5 as result from dual;
+
+    RESULT
+----------
+         2
+
+SQL> select 10- as result from dual;
+select 10- as result from dual
+           *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> select 10-5 as result from dual;
+
+    RESULT
+----------
+         5
+
+SQL> select sysdate as currrent_date from dual;
+
+CURRRENT_
+---------
+15-JUN-26
+
+SQL> SELECT * FROM student where student_branch ='ETC';
+
+       STD STUDENT_NA STUDENT_BR
+---------- ---------- ----------
+       101 isha       ETC
+
+SQL> create table employees( emp_id number(5) primary key,emp_name varchar(50),job_title varchar(30),salary number(10),
+  2  department varchar(30),hire_date Date);
+
+Table created.
+
+SQL> SELECT * FROM employees;
+
+no rows selected
+
+SQL> desc employees
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_ID                                    NOT NULL NUMBER(5)
+ EMP_NAME                                           VARCHAR2(50)
+ JOB_TITLE                                          VARCHAR2(30)
+ SALARY                                             NUMBER(10)
+ DEPARTMENT                                         VARCHAR2(30)
+ HIRE_DATE                                          DATE
+
+SQL> insert into employees values(1,'mahesh' ,'software',30000,'it',12/2/2024);
+insert into employees values(1,'mahesh' ,'software',30000,'it',12/2/2024)
+                                                                   *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> insert into employees values(1,'mahesh' ,'software',30000,'it',12-2-2024);
+insert into employees values(1,'mahesh' ,'software',30000,'it',12-2-2024)
+                                                                   *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> insert into employees values(1,'mahesh' ,'software',30000,'it',2026-03-03);
+insert into employees values(1,'mahesh' ,'software',30000,'it',2026-03-03)
+                                                                      *
+ERROR at line 1:
+ORA-00932: inconsistent datatypes: expected DATE got NUMBER
+
+
+SQL> insert into employees values(101,'mahesh' ,'manager',75000,'hr','12-2-2026');
+insert into employees values(101,'mahesh' ,'manager',75000,'hr','12-2-2026')
+                                                                *
+ERROR at line 1:
+ORA-01843: not a valid month
+
+
+SQL> insert into employees values(101,'mahesh' ,'manager',75000,'hr','12-02-2026');
+insert into employees values(101,'mahesh' ,'manager',75000,'hr','12-02-2026')
+                                                                *
+ERROR at line 1:
+ORA-01843: not a valid month
+
+
+SQL> insert into employees values(101,'mahesh' ,'manager',75000,'hr','12-jan-2026');
+
+1 row created.
+
+SQL> insert into employees values(102,'athrav' ,'analyst',60000,'finance','21-mar-2026');
+
+1 row created.
+
+SQL> insert into employees values(103,'priya' ,'developer',60000,'it','03-may-2026');
+
+1 row created.
+
+SQL> insert into employees values(104,'mansi' ,'tester',50000,'it','29-jan-2026');
+
+1 row created.
+
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+       101 mahesh
+manager                             75000 hr
+12-JAN-26
+
+       102 athrav
+analyst                             60000 finance
+21-MAR-26
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+
+       103 priya
+developer                           60000 it
+03-MAY-26
+
+       104 mansi
+tester                              50000 it
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+29-JAN-26
+
+
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+       101 mahesh
+manager                             75000 hr
+12-JAN-26
+
+       102 athrav
+analyst                             60000 finance
+21-MAR-26
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+
+       103 priya
+developer                           60000 it
+03-MAY-26
+
+       104 mansi
+tester                              50000 it
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+29-JAN-26
+
+
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+       101 mahesh
+manager                             75000 hr
+12-JAN-26
+
+       102 athrav
+analyst                             60000 finance
+21-MAR-26
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+
+       103 priya
+developer                           60000 it
+03-MAY-26
+
+       104 mansi
+tester                              50000 it
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+29-JAN-26
+
+
+SQL> insert into employees values(105,'neha' ,'hr executive',45000,'hr',15-aug-2026);
+insert into employees values(105,'neha' ,'hr executive',45000,'hr',15-aug-2026)
+                                                                      *
+ERROR at line 1:
+ORA-00984: column not allowed here
+
+
+SQL> insert into employees values(105,'neha' ,'hr executive',45000,'hr','15-aug-2026');
+
+1 row created.
+
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+       101 mahesh
+manager                             75000 hr
+12-JAN-26
+
+       102 athrav
+analyst                             60000 finance
+21-MAR-26
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+
+       103 priya
+developer                           60000 it
+03-MAY-26
+
+       104 mansi
+tester                              50000 it
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+29-JAN-26
+
+       105 neha
+hr executive                        45000 hr
+15-AUG-26
+
+
+SQL> SELECT EMP_ID,
+  2         EMP_NAME,
+  3         JOB_TITLE,
+  4         SALARY,
+  5         DEPARTMENT,
+  6         HIRE_DATE
+  7  FROM EMPLOYEE;
+FROM EMPLOYEE
+     *
+ERROR at line 7:
+ORA-00942: table or view does not exist
+
+
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+       101 mahesh
+manager                             75000 hr
+12-JAN-26
+
+       102 athrav
+analyst                             60000 finance
+21-MAR-26
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+
+       103 priya
+developer                           60000 it
+03-MAY-26
+
+       104 mansi
+tester                              50000 it
+
+    EMP_ID EMP_NAME
+---------- --------------------------------------------------
+JOB_TITLE                          SALARY DEPARTMENT
+------------------------------ ---------- ------------------------------
+HIRE_DATE
+---------
+29-JAN-26
+
+       105 neha
+hr executive                        45000 hr
+15-AUG-26
+
+
+SQL> SET LINESIZE 200;
+SQL> SET PAGESIZE 100;
+SQL> SET WRAP OFF;
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       101 mahesh                                             manager                             75000 hr                             12-JAN-26
+       102 athrav                                             analyst                             60000 finance                        21-MAR-26
+       103 priya                                              developer                           60000 it                             03-MAY-26
+       104 mansi                                              tester                              50000 it                             29-JAN-26
+       105 neha                                               hr executive                        45000 hr                             15-AUG-26
+
+SQL> commit;
+
+Commit complete.
+
+SQL> update employees set salary= salary *1.10 where job_title='developer';
+
+1 row updated.
+
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       101 mahesh                                             manager                             75000 hr                             12-JAN-26
+       102 athrav                                             analyst                             60000 finance                        21-MAR-26
+       103 priya                                              developer                           66000 it                             03-MAY-26
+       104 mansi                                              tester                              50000 it                             29-JAN-26
+       105 neha                                               hr executive                        45000 hr                             15-AUG-26
+
+SQL> -- Find records matching a specific day
+SQL> SELECT * FROM Orders WHERE OrderDate = '2026-06-15';
+SELECT * FROM Orders WHERE OrderDate = '2026-06-15'
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL>
+SQL> -- Find records within a specific window
+SQL> SELECT * FROM Orders WHERE OrderDate BETWEEN '2026-01-01' AND '2026-06-15';
+SELECT * FROM Orders WHERE OrderDate BETWEEN '2026-01-01' AND '2026-06-15'
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> SELECT * FROM Orders WHERE OrderDate BETWEEN '12-jan-2026' AND '30-jan-26';
+SELECT * FROM Orders WHERE OrderDate BETWEEN '12-jan-2026' AND '30-jan-26'
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> commit;
+
+Commit complete.
+
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       101 mahesh                                             manager                             75000 hr                             12-JAN-26
+       102 athrav                                             analyst                             60000 finance                        21-MAR-26
+       103 priya                                              developer                           66000 it                             03-MAY-26
+       104 mansi                                              tester                              50000 it                             29-JAN-26
+       105 neha                                               hr executive                        45000 hr                             15-AUG-26
+
+SQL> SELECT * FROM Orders WHERE OrderDate BETWEEN '12-jan-2026' AND '30-jan-2026';
+SELECT * FROM Orders WHERE OrderDate BETWEEN '12-jan-2026' AND '30-jan-2026'
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> SELECT * FROM employees WHERE OrderDate BETWEEN '12-jan-2026' AND '30-jan-2026';
+SELECT * FROM employees WHERE OrderDate BETWEEN '12-jan-2026' AND '30-jan-2026'
+                              *
+ERROR at line 1:
+ORA-00904: "ORDERDATE": invalid identifier
+
+
+SQL> SELECT * FROM employees WHERE hire_Date BETWEEN '12-jan-2026' AND '30-jan-2026';
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       101 mahesh                                             manager                             75000 hr                             12-JAN-26
+       104 mansi                                              tester                              50000 it                             29-JAN-26
+
+SQL> delete from employees where department ='tester';
+
+0 rows deleted.
+
+SQL> delete from employees where department ='finance';
+
+1 row deleted.
+
+SQL> SELECT * FROM employees;
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       101 mahesh                                             manager                             75000 hr                             12-JAN-26
+       103 priya                                              developer                           66000 it                             03-MAY-26
+       104 mansi                                              tester                              50000 it                             29-JAN-26
+       105 neha                                               hr executive                        45000 hr                             15-AUG-26
+
+SQL> SELECT * FROM employees where salary>50000;
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       101 mahesh                                             manager                             75000 hr                             12-JAN-26
+       103 priya                                              developer                           66000 it                             03-MAY-26
+
+SQL> SELECT * FROM employees where salary>=50000;
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       101 mahesh                                             manager                             75000 hr                             12-JAN-26
+       103 priya                                              developer                           66000 it                             03-MAY-26
+       104 mansi                                              tester                              50000 it                             29-JAN-26
+
+SQL> SELECT * FROM employees where salary<50000;
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       105 neha                                               hr executive                        45000 hr                             15-AUG-26
+
+SQL> SELECT * FROM employees order by salary desc;
+
+    EMP_ID EMP_NAME                                           JOB_TITLE                          SALARY DEPARTMENT                     HIRE_DATE
+---------- -------------------------------------------------- ------------------------------ ---------- ------------------------------ ---------
+       101 mahesh                                             manager                             75000 hr                             12-JAN-26
+       103 priya                                              developer                           66000 it                             03-MAY-26
+       104 mansi                                              tester                              50000 it                             29-JAN-26
+       105 neha                                               hr executive                        45000 hr                             15-AUG-26
+
+SQL>
